@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vWG-tT-9oj">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="04B-Hw-6bh">
+            <objects>
+                <viewController id="vWG-tT-9oj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r1d-wq-0O7"/>
+                        <viewControllerLayoutGuide type="bottom" id="bht-oG-ReU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TtF-uG-vql">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jck-NR-2wl">
+                                <rect key="frame" x="53" y="127" width="213" height="30"/>
+                                <state key="normal" title="EXEMPLO: ANIMAR UMA VIEW"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="XUA-ct-aK5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBg-nw-0bx">
+                                <rect key="frame" x="27" y="411" width="266" height="30"/>
+                                <state key="normal" title="EXEMPLO: DEQUEUE REUSABLE CELL"/>
+                                <connections>
+                                    <segue destination="ZFw-Lx-xQp" kind="show" id="w9F-m9-e2I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jck-NR-2wl" firstAttribute="centerY" secondItem="TtF-uG-vql" secondAttribute="centerY" multiplier="0.5" id="DgS-Vb-Xem"/>
+                            <constraint firstItem="VBg-nw-0bx" firstAttribute="centerY" secondItem="TtF-uG-vql" secondAttribute="centerY" multiplier="1.5" id="Kbw-xE-TxK"/>
+                            <constraint firstItem="Jck-NR-2wl" firstAttribute="centerX" secondItem="TtF-uG-vql" secondAttribute="centerX" id="d7i-ns-2Ac"/>
+                            <constraint firstItem="VBg-nw-0bx" firstAttribute="centerX" secondItem="TtF-uG-vql" secondAttribute="centerX" id="g2I-2X-SJY"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AiD-Pj-9Aq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184" y="343"/>
+        </scene>
+        <!--Foo Table View Controller-->
+        <scene sceneID="IIZ-QS-Pfi">
+            <objects>
+                <viewController id="ZFw-Lx-xQp" customClass="FooTableViewController" customModule="POPLecture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nBf-Nb-BWP"/>
+                        <viewControllerLayoutGuide type="bottom" id="n2h-aq-1VI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8lf-PS-VZQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-0z-11m">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FooTableViewCell" id="90B-Cm-E9s" customClass="FooTableViewCell" customModule="POPLecture" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="90B-Cm-E9s" id="ML2-JN-oK4">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="159.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2dv-o6-Yag" customClass="FooImageView" customModule="POPLecture" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="159.5"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.1921568662" green="0.21960784489999999" blue="0.38039216399999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="2dv-o6-Yag" firstAttribute="leading" secondItem="ML2-JN-oK4" secondAttribute="leading" id="MZF-7A-bNb"/>
+                                                <constraint firstItem="2dv-o6-Yag" firstAttribute="top" secondItem="ML2-JN-oK4" secondAttribute="top" id="NA7-HL-OZI"/>
+                                                <constraint firstAttribute="bottom" secondItem="2dv-o6-Yag" secondAttribute="bottom" id="Seb-Pp-OWW"/>
+                                                <constraint firstAttribute="trailing" secondItem="2dv-o6-Yag" secondAttribute="trailing" id="nci-xC-rT6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fooImageView" destination="2dv-o6-Yag" id="24K-E8-qCv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZFw-Lx-xQp" id="bAE-OC-6QM"/>
+                                    <outlet property="delegate" destination="ZFw-Lx-xQp" id="y5x-T1-Nh0"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1v9-2W-cRZ">
+                                <rect key="frame" x="276" y="20" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FaA-a5-wYd"/>
+                                    <constraint firstAttribute="width" constant="44" id="HWr-ZI-i9o"/>
+                                </constraints>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="closeButtonTouchedUpInside:" destination="ZFw-Lx-xQp" eventType="touchUpInside" id="Fjz-2c-lfW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sfl-0z-11m" firstAttribute="leading" secondItem="8lf-PS-VZQ" secondAttribute="leading" id="6iy-ZW-wgz"/>
+                            <constraint firstAttribute="trailing" secondItem="1v9-2W-cRZ" secondAttribute="trailing" id="OdE-3D-Dj4"/>
+                            <constraint firstItem="n2h-aq-1VI" firstAttribute="top" secondItem="sfl-0z-11m" secondAttribute="bottom" id="QYn-Ig-BmT"/>
+                            <constraint firstItem="sfl-0z-11m" firstAttribute="top" secondItem="nBf-Nb-BWP" secondAttribute="bottom" id="gUI-6g-j7X"/>
+                            <constraint firstItem="1v9-2W-cRZ" firstAttribute="top" secondItem="nBf-Nb-BWP" secondAttribute="bottom" id="paY-4f-q1C"/>
+                            <constraint firstAttribute="trailing" secondItem="sfl-0z-11m" secondAttribute="trailing" id="zIN-eT-gMZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9O-98-gbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="761"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="POPLecture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ThumbsUp" translatesAutoresizingMaskIntoConstraints="NO" id="twN-lm-WRD" customClass="FooImageView" customModule="POPLecture" customModuleProvider="target">
+                                <rect key="frame" x="40" y="194" width="240" height="180"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3r-0d-jtl" customClass="FooButton" customModule="POPLecture" customModuleProvider="target">
+                                <rect key="frame" x="139" y="398" width="42" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="whe-pX-j8B"/>
+                                </constraints>
+                                <state key="normal" title="Shake"/>
+                                <connections>
+                                    <action selector="shakeButtonTouchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XD4-B6-End"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAJ-3A-zNE">
+                                <rect key="frame" x="276" y="20" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="E64-qQ-DTP"/>
+                                    <constraint firstAttribute="width" constant="44" id="dxA-9M-D7I"/>
+                                </constraints>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="closeButtonTouchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="drc-PZ-oC7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19215686619281769" green="0.21960784494876862" blue="0.3803921639919281" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="twN-lm-WRD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Nui-Eo-r1Q"/>
+                            <constraint firstItem="O3r-0d-jtl" firstAttribute="top" secondItem="twN-lm-WRD" secondAttribute="bottom" constant="24" id="YjW-vp-0yS"/>
+                            <constraint firstItem="twN-lm-WRD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bCN-BG-ohD"/>
+                            <constraint firstItem="bAJ-3A-zNE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bM7-pD-dnx"/>
+                            <constraint firstAttribute="trailing" secondItem="bAJ-3A-zNE" secondAttribute="trailing" id="jNe-LK-Pbx"/>
+                            <constraint firstItem="O3r-0d-jtl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sqt-EQ-W2Z"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="fooButton" destination="O3r-0d-jtl" id="qQx-jP-XPR"/>
+                        <outlet property="fooImageView" destination="twN-lm-WRD" id="rPD-9L-veF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ThumbsUp" width="240" height="180"/>
+    </resources>
+</document>
